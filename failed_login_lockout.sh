@@ -2,7 +2,7 @@
 
 echo "Security Control: Failed Login Lockout"
 
-deny_value=$(grep "^deny" /etc/security/faillock.conf | awk -F= '{print $2}' | xargs)
+deny_value=$(grep "^deny" /etc/security/faillock.conf | awk -F= '{print $2}')
 
 echo "Expected: 3 failed attempts"
 echo "Actual: $deny_value"
