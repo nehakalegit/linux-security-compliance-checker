@@ -2,7 +2,7 @@
 
 echo "Security Control: Password Minimum Length"
 
-min_length=$(grep "^minlen" /etc/security/pwquality.conf | awk -F= '{print $2}' | xargs)
+min_length=$(grep "^minlen" /etc/security/pwquality.conf | awk -F= '{print $2}')
 
 echo "Expected: 14 or more"
 echo "Actual: $min_length"
